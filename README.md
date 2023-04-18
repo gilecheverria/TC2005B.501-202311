@@ -9,8 +9,8 @@ Logo for the game:
 ## Pending Unity topics
 
 - [x] Physics
-- [ ] Collision detection
-- [ ] Basic motion
+- [x] Collision detection
+- [x] Basic motion
 - [ ] GUI text
 - [ ] Audio elements
 - [ ] UserPrefs
