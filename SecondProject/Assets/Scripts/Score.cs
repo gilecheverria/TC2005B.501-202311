@@ -25,6 +25,6 @@ public class Score : MonoBehaviour
     {
         points += 1;
         scoreText.text = "Score: " + points;
-        particles.Emit(15);
+        particles.Emit(20);
     }
 }
