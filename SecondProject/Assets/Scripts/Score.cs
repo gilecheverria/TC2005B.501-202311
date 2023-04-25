@@ -23,7 +23,7 @@ public class Score : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        points += 1;
+        points += 20;
         scoreText.text = "Score: " + points;
         particles.Emit(20);
     }
