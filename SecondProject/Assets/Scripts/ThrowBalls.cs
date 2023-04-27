@@ -1,12 +1,11 @@
 /*
 Create copies of a ball object to fall on the game scene
+The balls fall at regular intervals from random positions above the screen
 
 Gilberto Echeverria
 2023-04-18
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ThrowBalls : MonoBehaviour
@@ -20,6 +19,12 @@ public class ThrowBalls : MonoBehaviour
     {
         // Call the specified function at regular intervals
         InvokeRepeating("CreateBall", delay, delay);
+    }
+
+    public void Stop()
+    {
+        // Cancell the repeated call of the function, so the balls stop falling
+        CancelInvoke("CreateBall");
     }
 
     void CreateBall()
