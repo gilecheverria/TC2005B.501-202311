@@ -11,17 +11,20 @@ Logo for the game:
 - [x] Physics
 - [x] Collision detection
 - [x] Basic motion
-- [ ] GUI text
-- [ ] Audio elements
-- [ ] UserPrefs
-- [ ] LERP (coordenadas, colores, etc.)
+- [x] GUI text
+- [x] Audio elements
+- [ ] PlayerPrefs
+- [ ] Switching scenes
+- [ ] Build to WebGL
+- [x] LERP (coordenadas, colores, etc.)
 - [ ] Blinking effect
 - [ ] Tile maps
 - [ ] NavMesh
+- [ ] Aim with mouse
 - [ ] GUI buttons
 - [ ] Camera (Cinemachine)
 - [ ] Animation system
-- [ ] Particle effects
+- [x] Particle effects
 - [ ] Web requests
 - [ ] Embed into existing web page
 - [ ] Get data from web page
