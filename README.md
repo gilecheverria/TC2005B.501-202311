@@ -13,8 +13,9 @@ Logo for the game:
 - [x] Basic motion
 - [x] GUI text
 - [x] Audio elements
-- [ ] PlayerPrefs
-- [ ] Switching scenes
+- [x] PlayerPrefs
+- [x] Switching scenes
+- [x] Coroutines
 - [ ] Build to WebGL
 - [x] LERP (coordenadas, colores, etc.)
 - [ ] Blinking effect

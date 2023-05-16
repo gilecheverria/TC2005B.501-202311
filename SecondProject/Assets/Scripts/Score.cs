@@ -5,8 +5,11 @@ Gilberto Echeverria
 2023-04-19
 */
 
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class Score : MonoBehaviour
 {
@@ -18,12 +21,14 @@ public class Score : MonoBehaviour
     [SerializeField] BellMotion bell;
     [SerializeField] ThrowBalls throwBalls;
     [SerializeField] int pointLimit;
+    HorizontalMovement motion;
 
     int points;
 
     // Start is called before the first frame update
     void Start()
     {
+        motion = GetComponent<HorizontalMovement>();
         points = 0;
     }
 
@@ -39,8 +44,28 @@ public class Score : MonoBehaviour
 
         // Finish the game when reaching a certain number of points
         if(points == pointLimit) {
+            // Disable the motion component to stop the player from moving
+            motion.enabled = false;
+            // Store the final score to be used in another scene
+            PlayerPrefs.SetInt("TotalScore", points);
             throwBalls.Stop();
             scoreText.text += "\nYOU WON!";
+            // Two ways to wait before changin the scene
+            //Invoke("NextScene", 1);
+            StartCoroutine(NextSceneInSeconds(2));
         }
     }
+
+    void NextScene()
+    {
+        SceneManager.LoadScene("Victory");
+    }
+
+    IEnumerator NextSceneInSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Victory");
+    }
+
+
 }
